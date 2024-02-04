@@ -1,0 +1,113 @@
+@use "variables";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  letter-spacing: 0em;
+  h1 {
+    @include variables.text(22px, 700, 140%);
+    color: variables.$text-color-title;
+    scroll-margin-top: 120px;
+  }
+  h2 {
+    @include variables.text(20px, 700, 140%);
+    color: variables.$text-color-title;
+    scroll-margin-top: 120px;
+  }
+  h3 {
+    @include variables.text(25px, 700, 140%);
+    color: variables.$text-color-title;
+    scroll-margin-top: 120px;
+  }
+
+  h4 {
+    @include variables.text(16px, 700, 140%);
+    color: variables.$text-color-primary;
+  }
+  h5 {
+    @include variables.text(15px, 600, 140%);
+    color: variables.$text-color-primary;
+  }
+  p {
+    @include variables.text(15px, 500, 150%);
+    color: variables.$text-color-primary;
+    margin-top: 10px;
+  }
+  b {
+    @include variables.text(15px, 700, 150%);
+  }
+  .text-secondary {
+    @include variables.text(14px, 500, 150%);
+    color: variables.$text-color-secondary;
+  }
+
+  a {
+    @include variables.text(15px, 500, 150%);
+  }
+  .button {
+    display: block;
+    background-color: variables.$secondary-color;
+    color: white;
+    text-align: center;
+    border-radius: variables.$radius;
+    min-height: 56px;
+  }
+  .bg-primary {
+    background-color: variables.$bg-gray;
+  }
+
+  .input {
+    width: 100%;
+    min-height: 56px;
+    padding: 12px, 16px, 14px, 16px;
+    border-radius: variables.$radius;
+    border: 2px solid variables.$bg-violet-half;
+    background-color: variables.$bg-input;
+    @include variables.text(15px, 500, 150%);
+    color: variables.$text-color-input;
+  }
+  .input:focus {
+    outline: none;
+    border: 2px solid variables.$secondary-color;
+  }
+  .input-error {
+    background: url("~/public/alert-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    border: 2px solid variables.$error-color;
+  }
+  .password-text {
+    @include variables.text(16px, 700, 140%);
+    text-align: center;
+    color: #ffffff;
+  }
+  .textError {
+    color: variables.$error-color;
+    @include variables.text(12px, 500, 150%);
+  }
+  .border-line {
+    border-bottom: 2px solid variables.$primary-color;
+  }
+
+  .slide-up-enter-active,
+  .slide-up-leave-active {
+    transition: all 0.25s ease-out;
+  }
+
+  .slide-up-enter-from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .slide-up-leave-to {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}

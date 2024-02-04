@@ -1,0 +1,25 @@
+$primary-color: #64855b;
+$secondary-color: #806dff;
+
+$input-color: #d8ddef;
+$error-color: #f34141;
+
+$text-color-primary: #4e595c;
+$text-color-secondary: #8a949c;
+$text-color-input: #898094;
+$text-color-title: #3a4649;
+
+$bg-gray: #525252;
+$bg-violet: #806dff;
+$bg-input: #ecf4fb;
+
+$bg-violet-half: #806dff83;
+
+$block-width: 320px;
+$radius: 12px;
+
+@mixin text($size, $weight, $line-height) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
